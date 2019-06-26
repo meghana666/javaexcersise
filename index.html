@@ -1,0 +1,116 @@
+<head>
+
+    <meta charset="UTF-8"/>
+    
+    <title>JavaScript</title>
+         </head>
+               <body>
+                      <h1>JavaScript</h1>
+                              <script type="text/JavaScript">
+
+let house = {
+    areas: [
+        {
+            livingRoom: {
+                items: ['tv','sofa']
+            }
+        },
+        {
+            bedroomOne: {
+                items: ['bed','washing machine'],
+                windows: 3
+            }
+        },
+        {
+            bedroomTwo:{
+                items: ['bed','bed','desk'],
+                windows: 4
+            }
+        },
+        {
+            kitchen:{
+                items: ['fridge','broken chair','microwave']
+            }
+        }
+    ],
+    garden: [true, 'Red Rose'],
+    garage: {
+        car: {
+            color: 'red',
+            wheels: 4,
+            honk: ()=>{alert("Beep")}
+        }
+    }
+}
+
+
+
+/******** Answers Section ********/
+
+// (1) Find total number of areas in the house
+
+console.log ('Q1',house.areas.length)
+
+// (2) Add a dining table to the living room
+
+console.log('Q2',house.areas[0].livingRoom.items.push('dining table'))
+
+// (3) Add a stove to the kitchen
+
+    console.log('Q3',house.areas[3].kitchen.items.push('stove'))
+
+    // (4) Remove the washing machine from bedroomOne
+
+    console.log('Q4',house.areas[1].bedroomOne.items.shift('washing machine'))
+
+    // (5) Find the total number of beds in all rooms
+
+    let bedCounter = 0;
+            let areaName = '';
+            let items = [];
+            for(let a=0; a<house.areas.length; a++) {
+                let areaNames = Object.keys(house.areas[a]);
+                for(let o=0; o<areaNames.length; o++) {
+                    areaName = areaNames[o];
+                    itemsObj = house.areas[a][areaName];
+                    for(let i = 0; i<itemsObj.items.length; i++) {
+                        if(itemsObj.items[i] == 'bed') {
+                            bedCounter++
+                        }
+                    }
+                }
+            }
+            console.log('Q5', bedCounter);
+   
+
+
+
+// (6) Change the color of the car to blue
+
+console.log('Q6',house.garage.car.color ='blue')
+
+// (7) Add a another car to the garage with a honk function
+console.log
+
+('Q7',house.garage.car2 =
+{
+            honk: ()=>{alert("Beep")}
+}
+)
+// (8) Make the new car honk
+
+console.log('Q8',house.garage.car2.honk)
+
+// (9) Change the 'broken chair' in the kitchen to 'new chair'
+
+console.log
+('Q9',house.areas[3].kitchen.items[2] ='new chair')
+
+// (10) If the house has a garden, console.log the name of the flower                                
+console.log('Q10',)
+if(house.garden[0]) {console.log(house.garden[1])}
+
+
+</script>
+</body>
+</html>
